@@ -218,9 +218,9 @@ I enjoy discovering vulnerabilities, exploring APIs, and learning security tools
 
 <section id="contact">
 <h2>Contact</h2>
-<p>Email: your-email@example.com</p>
-<p>GitHub: github.com/yourusername</p>
-<p>LinkedIn: linkedin.com/in/yourusername</p>
+<p>Email: santanubiswas@0005.com</p>
+<p>GitHub: github.com/cybersantanu.github.io</p>
+<p>LinkedIn: linkedin.com/in/santanu biswas</p>
 </section>
 
 <footer>

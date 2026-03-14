@@ -1,316 +1,241 @@
-# cybersantanu.github.io
-My Cybersecurity Portfolio Website – Santanu Biswas
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Santanu Biswas | Cybersecurity Portfolio</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
-margin:0;
-font-family:Consolas,monospace;
+font-family:'Poppins',sans-serif;
+background:#0a0a0a;
+color:white;
+scroll-behavior:smooth;
+}
+
+/* Loader */
+#loader{
+position:fixed;
+height:100vh;
+width:100%;
 background:black;
-color:#00ff9c;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+font-family:'Orbitron',sans-serif;
+z-index:9999;
 }
 
-header{
-text-align:center;
-padding:50px;
-background:#020617;
+.loader-text{
+color:#00f7ff;
+font-size:22px;
+margin:5px;
+animation:blink 1s infinite alternate;
 }
 
-header h1{
-font-size:40px;
-color:#00ff9c;
+@keyframes blink{
+from{opacity:0.4}
+to{opacity:1}
 }
 
+/* Navbar */
 nav{
-text-align:center;
-background:#111;
-padding:15px;
+position:fixed;
+width:100%;
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
 }
 
 nav a{
-margin:15px;
-color:#00ff9c;
+color:white;
+margin-left:25px;
 text-decoration:none;
-font-weight:bold;
+font-size:14px;
 }
 
+/* Hero */
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 10%;
+}
+
+.hero h1{
+font-family:'Orbitron',sans-serif;
+font-size:70px;
+margin-bottom:20px;
+}
+
+.hero h2{
+font-size:24px;
+color:#00f7ff;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:500px;
+margin-bottom:30px;
+}
+
+.btn{
+padding:12px 28px;
+border:1px solid #00f7ff;
+color:#00f7ff;
+text-decoration:none;
+margin-right:15px;
+}
+
+/* Sections */
 section{
-padding:60px 10%;
+padding:120px 10%;
 }
 
-.card{
-background:#111;
-border:1px solid #00ff9c;
-padding:25px;
-margin-top:20px;
-border-radius:10px;
-transition:0.3s;
+section h2{
+font-size:40px;
+margin-bottom:30px;
+font-family:'Orbitron',sans-serif;
 }
 
-.card:hover{
-transform:scale(1.03);
-box-shadow:0px 0px 10px #00ff9c;
-}
-
-.skills{
+.skills-grid, .projects-grid, .cert-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 }
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+.card{
+background:#111;
+padding:20px;
+border:1px solid #222;
 }
 
-.gallery img{
-width:100%;
-border:2px solid #00ff9c;
-border-radius:8px;
-}
-
-button{
-background:#00ff9c;
-border:none;
-padding:12px 25px;
-cursor:pointer;
-font-weight:bold;
+.card:hover{
+border-color:#00f7ff;
 }
 
 footer{
+padding:40px;
 text-align:center;
-padding:30px;
-background:#020617;
+background:#050505;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<header>
-
-<h1>Santanu Biswas</h1>
-
-<p>Cybersecurity & Ethical Hacking Enthusiast</p>
-
-<a href="Santanu_Biswas_CV.pdf">
-<button>Download CV</button>
-</a>
-
-</header>
-
+<div id="loader">
+<div class="loader-text">Loading Portfolio...</div>
+<div class="loader-text">Initializing Security Profile...</div>
+<div class="loader-text">Access Granted</div>
+</div>
 
 <nav>
-
+<div><b>Santanu</b></div>
+<div>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
-<a href="#certifications">Certificates</a>
 <a href="#projects">Projects</a>
-<a href="#reports">Bug Bounty</a>
+<a href="#cert">Certificates</a>
 <a href="#contact">Contact</a>
-
+</div>
 </nav>
 
+<section class="hero">
+<div>
+<h1>Santanu Biswas</h1>
+<h2>Cybersecurity Learner | Bug Bounty Hunter</h2>
+<p>Exploring vulnerabilities and learning how to build secure digital systems.</p>
+<a class="btn" href="#">Download CV</a>
+<a class="btn" href="#contact">Contact</a>
+</div>
+</section>
 
 <section id="about">
-
 <h2>About Me</h2>
-
-<div class="card">
-
 <p>
+Hello, I'm Santanu Biswas. I am a cybersecurity learner focused on bug bounty hunting,
+web application security testing, and reconnaissance techniques.
 
-Cybersecurity learner with hands-on exposure to Web Application
-Penetration Testing, Vulnerability Assessment, and Bug Bounty research.
-
-Passionate about discovering vulnerabilities and strengthening digital
-security through ethical hacking and responsible disclosure.
-
+I enjoy discovering vulnerabilities, exploring APIs, and learning security tools.
 </p>
-
-</div>
-
 </section>
-
 
 <section id="skills">
-
-<h2>Technical Skills</h2>
-
-<div class="skills">
-
-<div class="card">
-
-<h3>Security</h3>
-
-<ul>
-<li>Web Application Penetration Testing</li>
-<li>Vulnerability Assessment</li>
-<li>OWASP Top 10</li>
-<li>Bug Bounty Methodology</li>
-</ul>
-
+<h2>Skills</h2>
+<div class="skills-grid">
+<div class="card">Web Application Security</div>
+<div class="card">Bug Bounty Hunting</div>
+<div class="card">API Security Testing</div>
+<div class="card">OSINT Investigation</div>
+<div class="card">Kali Linux</div>
+<div class="card">Burp Suite</div>
+<div class="card">Nmap</div>
+<div class="card">Python</div>
 </div>
-
-<div class="card">
-
-<h3>Tools</h3>
-
-<ul>
-<li>Burp Suite</li>
-<li>Nmap</li>
-<li>Kali Linux</li>
-<li>OSINT Tools</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Programming</h3>
-
-<ul>
-<li>Python (Beginner)</li>
-</ul>
-
-</div>
-
-</div>
-
 </section>
-
-
-<section id="certifications">
-
-<h2>Certificate Gallery</h2>
-
-<div class="gallery">
-
-<img src="certificate1.jpg">
-<img src="certificate2.jpg">
-<img src="certificate3.jpg">
-<img src="certificate4.jpg">
-
-</div>
-
-</section>
-
 
 <section id="projects">
-
-<h2>Project Showcase</h2>
+<h2>Projects</h2>
+<div class="projects-grid">
 
 <div class="card">
-
-<h3>Web Application Security Testing Lab</h3>
-
-<p>
-
-Performed vulnerability testing on intentionally vulnerable web apps to
-understand SQL Injection, XSS, authentication flaws and security misconfigurations.
-
-</p>
-
+<h3>Bug Bounty Recon Automation</h3>
+<p>Recon workflow for discovering subdomains and hidden assets.</p>
 </div>
 
 <div class="card">
-
-<h3>Bug Bounty Recon Framework</h3>
-
-<p>
-
-Recon methodology using subdomain enumeration, Google dorks,
-and vulnerability discovery techniques.
-
-</p>
-
+<h3>OSINT Investigation Toolkit</h3>
+<p>Collected domain intelligence using OSINT tools.</p>
 </div>
 
 <div class="card">
-
-<h3>Network Scanning Project</h3>
-
-<p>
-
-Network reconnaissance using Nmap to identify open ports,
-services and potential attack surface.
-
-</p>
-
+<h3>API Security Testing Lab</h3>
+<p>Practiced testing APIs for vulnerabilities.</p>
 </div>
 
+</div>
 </section>
 
-
-<section id="reports">
-
-<h2>Bug Bounty Reports</h2>
-
-<div class="card">
-
-<h3>Max Healthcare Responsible Disclosure</h3>
-
-<p>
-
-Identified potential security issue during vulnerability testing
-and reported through responsible disclosure program.
-
-</p>
-
+<section id="cert">
+<h2>Certificates</h2>
+<div class="cert-grid">
+<div class="card">Cybersecurity Fundamentals</div>
+<div class="card">Ethical Hacking Training</div>
+<div class="card">OSINT Investigation</div>
+<div class="card">Bug Bounty Course</div>
 </div>
-
-<div class="card">
-
-<h3>Web Security Testing Reports</h3>
-
-<p>
-
-Documented vulnerability testing findings including
-misconfigurations and security weaknesses.
-
-</p>
-
-</div>
-
 </section>
-
 
 <section id="contact">
-
 <h2>Contact</h2>
-
-<div class="card">
-
-<p>Email: santanubiswas0005@gmail.com</p>
-
-<p>Location: West Bengal, India</p>
-
-<p>LinkedIn:
-www.linkedin.com/in/santanu-biswas-0218a4345
-</p>
-
-</div>
-
+<p>Email: your-email@example.com</p>
+<p>GitHub: github.com/yourusername</p>
+<p>LinkedIn: linkedin.com/in/yourusername</p>
 </section>
 
-
 <footer>
-
-<p>© 2026 Santanu Biswas | Cybersecurity Portfolio</p>
-
+© Santanu Biswas | Cybersecurity Portfolio
 </footer>
 
+<script>
+
+window.addEventListener("load",function(){
+setTimeout(function(){
+ document.getElementById("loader").style.display="none";
+},2000);
+});
+
+</script>
 
 </body>
 </html>

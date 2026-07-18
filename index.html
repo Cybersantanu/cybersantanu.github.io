@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Santanu Biswas | Cyber Security Enthusiast &amp; Ethical Hacker</title>
+<meta name="description" content="Santanu Biswas — Cyber Security Enthusiast, Ethical Hacker &amp; Penetration Tester. Portfolio featuring projects, certifications, and skills in network security and ethical hacking.">
+<meta name="keywords" content="Santanu Biswas, cyber security, ethical hacking, penetration testing, network security, portfolio">
+<meta name="author" content="Santanu Biswas">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Santanu Biswas | Cyber Security Enthusiast">
+<meta property="og:description" content="Ethical Hacker | Penetration Tester | Network Security Learner">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/profile.jpg">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%2300ff66%22>&gt;_</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== LOADING SCREEN ===================== -->
+<div id="loading-screen" aria-hidden="true">
+  <div class="loading-inner">
+    <div class="loading-logo">SB<span class="cursor-blink">_</span></div>
+    <div class="loading-terminal" id="loading-terminal">
+      <p><span class="prompt">root@cybersantanu:~$</span> <span class="type-line" data-text="initializing_system.sh"></span></p>
+    </div>
+    <div class="loading-bar-track">
+      <div class="loading-bar-fill" id="loading-bar-fill"></div>
+    </div>
+    <div class="loading-percent" id="loading-percent">0%</div>
+  </div>
+</div>
+
+<!-- ===================== SCROLL PROGRESS ===================== -->
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<!-- ===================== BACKGROUND LAYERS ===================== -->
+<canvas id="matrix-canvas" aria-hidden="true"></canvas>
+<div class="cyber-grid" aria-hidden="true"></div>
+<div class="mouse-glow" id="mouse-glow" aria-hidden="true"></div>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar" id="navbar">
+  <nav class="nav-container">
+    <a href="#home" class="nav-logo">
+      <span class="logo-bracket">&lt;</span>SB<span class="logo-bracket">/&gt;</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" class="nav-link active" data-index="00">Home</a></li>
+      <li><a href="#about" class="nav-link" data-index="01">About</a></li>
+      <li><a href="#skills" class="nav-link" data-index="02">Skills</a></li>
+      <li><a href="#projects" class="nav-link" data-index="03">Projects</a></li>
+      <li><a href="#certifications" class="nav-link" data-index="04">Certs</a></li>
+      <li><a href="#resume" class="nav-link" data-index="05">Resume</a></li>
+      <li><a href="#contact" class="nav-link" data-index="06">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Hire Me</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ===================== HERO ===================== -->
+<section id="home" class="hero">
+  <div class="hero-container">
+    <div class="hero-text reveal">
+      <p class="hero-eyebrow"><span class="dot-live"></span> SYSTEM STATUS: AVAILABLE FOR OPPORTUNITIES</p>
+      <h1 class="hero-heading">
+        Santanu Biswas
+      </h1>
+      <p class="hero-subtitle">
+        <span id="typing-text"></span><span class="type-cursor">|</span>
+      </p>
+      <p class="hero-desc">
+        I break systems on purpose — so real attackers can't break them by accident.
+        Aspiring cyber security professional focused on network defense, penetration
+        testing, and building a safer digital perimeter.
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">
+          <span>View Projects</span>
+        </a>
+        <a href="assets/resume.pdf" class="btn btn-outline" download>
+          <span>Download Resume</span>
+        </a>
+        <a href="https://github.com/cybersantanu" target="_blank" rel="noopener" class="btn btn-ghost">
+          <span>GitHub</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="stat-num" data-count="15">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Tools Mastered</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num" data-count="6">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Projects Built</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num" data-count="8">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="photo-ring ring-outer"></div>
+      <div class="photo-ring ring-mid"></div>
+      <div class="photo-frame">
+        <img src="assets/profile.jpg" alt="Santanu Biswas profile photo" class="hero-photo" onerror="this.style.display='none'; this.parentElement.classList.add('no-photo');">
+        <div class="photo-fallback">SB</div>
+      </div>
+      <div class="hero-terminal-chip">
+        <span class="chip-dot"></span> nmap -sV target.local
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-indicator" id="scroll-indicator" aria-label="Scroll to About section">
+    <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+    <span class="scroll-label">SCROLL</span>
+  </button>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="section about">
+  <div class="section-container">
+    <p class="section-eyebrow reveal">01 / ABOUT</p>
+    <h2 class="section-heading reveal">Who Am I</h2>
+
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p>
+          I'm Santanu Biswas, a cyber security enthusiast building a strong foundation in
+          ethical hacking, network defense, and penetration testing. My interest in security
+          started with a simple question — <em>"how would someone actually break into this?"</em>
+          — and turned into a discipline of learning how systems fail so I can help make
+          them fail less.
+        </p>
+        <p>
+          I spend my time inside labs like TryHackMe and Hack The Box, reverse-engineering
+          how vulnerabilities work, and translating that knowledge into practical defense.
+          I care about doing this the right way: responsibly, ethically, and in service of
+          people and institutions that need it — including a long-term goal of supporting
+          law enforcement cyber crime units.
+        </p>
+
+        <div class="about-block">
+          <h3 class="about-block-title">Career Objective</h3>
+          <p>
+            To grow into a professional penetration tester and security analyst role where
+            I can proactively identify vulnerabilities, strengthen defensive infrastructure,
+            and contribute to national and organizational cyber resilience.
+          </p>
+        </div>
+
+        <div class="about-block">
+          <h3 class="about-block-title">Education</h3>
+          <ul class="about-list">
+            <li><span class="li-tag">EDU</span> Currently pursuing studies with a focus on Computer Science &amp; Cyber Security fundamentals.</li>
+            <li><span class="li-tag">SELF</span> Self-directed training in ethical hacking via hands-on labs and CTFs.</li>
+          </ul>
+        </div>
+
+        <div class="about-block">
+          <h3 class="about-block-title">Future Goals</h3>
+          <ul class="about-list">
+            <li><span class="li-tag">01</span> Earn industry certifications (CEH, OSCP, CompTIA Security+).</li>
+            <li><span class="li-tag">02</span> Contribute to bug bounty programs and responsible disclosure.</li>
+            <li><span class="li-tag">03</span> Support cyber crime prevention efforts with law enforcement.</li>
+            <li><span class="li-tag">04</span> Build a career as a professional penetration tester.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="about-terminal reveal">
+        <div class="terminal-window">
+          <div class="terminal-titlebar">
+            <span class="tdot td-red"></span><span class="tdot td-yellow"></span><span class="tdot td-green"></span>
+            <span class="terminal-title">whoami.sh</span>
+          </div>
+          <div class="terminal-body" id="about-terminal-body">
+            <p><span class="prompt">root@cybersantanu:~$</span> whoami</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills" class="section skills">
+  <div class="section-container">
+    <p class="section-eyebrow reveal">02 / SKILLS</p>
+    <h2 class="section-heading reveal">Technical Arsenal</h2>
+    <p class="section-sub reveal">Tools and technologies I use to find, exploit, and fix vulnerabilities.</p>
+
+    <div class="skills-grid">
+
+      <div class="skill-group reveal">
+        <h3 class="skill-group-title">Offensive Security</h3>
+        <div class="skill-card" data-level="80"><div class="skill-top"><span>Kali Linux</span><span class="skill-pct">80%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-card" data-level="75"><div class="skill-top"><span>Burp Suite</span><span class="skill-pct">75%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-card" data-level="82"><div class="skill-top"><span>Nmap</span><span class="skill-pct">82%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-card" data-level="70"><div class="skill-top"><span>Wireshark</span><span class="skill-pct">70%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+      </div>
+
+      <div class="skill-group reveal">
+        <h3 class="skill-group-title">Core Foundations</h3>
+        <div class="skill-card" data-level="78"><div class="skill-top"><span>Python</span><span class="skill-pct">78%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-card" data-level="85"><div class="skill-top"><span>Linux</span><span class="skill-pct">85%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-card" data-level="72"><div class="skill-top"><span>Networking</span><span class="skill-pct">72%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-card" data-level="76"><div class="skill-top"><span>Ethical Hacking</span><span class="skill-pct">76%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+      </div>
+
+      <div class="skill-group reveal">
+        <h3 class="skill-group-title">Web &amp; Tooling</h3>
+        <div class="skill-card" data-level="88"><div class="skill-top"><span>HTML</span><span class="skill-pct">88%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-card" data-level="84"><div class="skill-top"><span>CSS</span><span class="skill-pct">84%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-card" data-level="74"><div class="skill-top"><span>JavaScript</span><span class="skill-pct">74%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-card" data-level="80"><div class="skill-top"><span>Git &amp; GitHub</span><span class="skill-pct">80%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects" class="section projects">
+  <div class="section-container">
+    <p class="section-eyebrow reveal">03 / PROJECTS</p>
+    <h2 class="section-heading reveal">Selected Projects</h2>
+    <p class="section-sub reveal">Hands-on builds that translate security theory into working tools.</p>
+
+    <div class="projects-grid">
+
+      <article class="project-card reveal">
+        <div class="project-thumb"><div class="thumb-glyph">&#128272;</div></div>
+        <div class="project-body">
+          <h3>Network Vulnerability Scanner</h3>
+          <p>A Python-based scanner that automates host discovery, port scanning, and basic service fingerprinting to flag common misconfigurations.</p>
+          <div class="tech-stack">
+            <span>Python</span><span>Nmap</span><span>Sockets</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/cybersantanu" target="_blank" rel="noopener" class="btn btn-sm btn-outline">GitHub</a>
+            <a href="#" class="btn btn-sm btn-ghost">Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-thumb"><div class="thumb-glyph">&#128737;</div></div>
+        <div class="project-body">
+          <h3>Phishing Detection Tool</h3>
+          <p>Analyzes URLs and email headers against heuristic rules to identify likely phishing attempts before a user clicks through.</p>
+          <div class="tech-stack">
+            <span>Python</span><span>Regex</span><span>Heuristics</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/cybersantanu" target="_blank" rel="noopener" class="btn btn-sm btn-outline">GitHub</a>
+            <a href="#" class="btn btn-sm btn-ghost">Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-thumb"><div class="thumb-glyph">&#128274;</div></div>
+        <div class="project-body">
+          <h3>Password Strength Auditor</h3>
+          <p>Evaluates password strength using entropy scoring and checks against common breached-password patterns.</p>
+          <div class="tech-stack">
+            <span>Python</span><span>Hashlib</span><span>CLI</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/cybersantanu" target="_blank" rel="noopener" class="btn btn-sm btn-outline">GitHub</a>
+            <a href="#" class="btn btn-sm btn-ghost">Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-thumb"><div class="thumb-glyph">&#128225;</div></div>
+        <div class="project-body">
+          <h3>Home Lab Intrusion Detection</h3>
+          <p>A lightweight IDS built for a home lab environment, logging and alerting on suspicious traffic patterns in real time.</p>
+          <div class="tech-stack">
+            <span>Python</span><span>Wireshark</span><span>Linux</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/cybersantanu" target="_blank" rel="noopener" class="btn btn-sm btn-outline">GitHub</a>
+            <a href="#" class="btn btn-sm btn-ghost">Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-thumb"><div class="thumb-glyph">&#127760;</div></div>
+        <div class="project-body">
+          <h3>This Portfolio</h3>
+          <p>A hand-coded, animation-driven personal site built from scratch with vanilla HTML, CSS, and JavaScript — no frameworks.</p>
+          <div class="tech-stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/cybersantanu" target="_blank" rel="noopener" class="btn btn-sm btn-outline">GitHub</a>
+            <a href="#" class="btn btn-sm btn-ghost">Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-thumb"><div class="thumb-glyph">&#128737;&#65039;</div></div>
+        <div class="project-body">
+          <h3>CTF Write-ups Archive</h3>
+          <p>A documented collection of Capture-The-Flag challenge solutions from TryHackMe and Hack The Box, with methodology notes.</p>
+          <div class="tech-stack">
+            <span>Markdown</span><span>Linux</span><span>Burp Suite</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/cybersantanu" target="_blank" rel="noopener" class="btn btn-sm btn-outline">GitHub</a>
+            <a href="#" class="btn btn-sm btn-ghost">Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CERTIFICATIONS ===================== -->
+<section id="certifications" class="section certifications">
+  <div class="section-container">
+    <p class="section-eyebrow reveal">04 / CERTIFICATIONS</p>
+    <h2 class="section-heading reveal">Certifications &amp; Badges</h2>
+    <p class="section-sub reveal">Proof of continuous learning — add unlimited certificates to this gallery.</p>
+
+    <div class="cert-grid" id="cert-grid">
+      <!-- Certificate cards are template-driven; duplicate .cert-card to add more -->
+      <div class="cert-card reveal">
+        <div class="cert-icon">&#127891;</div>
+        <h3>Introduction to Cyber Security</h3>
+        <p class="cert-issuer">Cisco Networking Academy</p>
+        <div class="cert-actions">
+          <a href="assets/certificates/cert-1.pdf" target="_blank" class="btn btn-sm btn-outline">Preview</a>
+          <a href="assets/certificates/cert-1.pdf" download class="btn btn-sm btn-ghost">Download</a>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon">&#128272;</div>
+        <h3>Pre Security</h3>
+        <p class="cert-issuer">TryHackMe</p>
+        <div class="cert-actions">
+          <a href="assets/certificates/cert-2.pdf" target="_blank" class="btn btn-sm btn-outline">Preview</a>
+          <a href="assets/certificates/cert-2.pdf" download class="btn btn-sm btn-ghost">Download</a>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon">&#128225;</div>
+        <h3>Network Fundamentals</h3>
+        <p class="cert-issuer">Cisco Networking Academy</p>
+        <div class="cert-actions">
+          <a href="assets/certificates/cert-3.pdf" target="_blank" class="btn btn-sm btn-outline">Preview</a>
+          <a href="assets/certificates/cert-3.pdf" download class="btn btn-sm btn-ghost">Download</a>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon">&#128737;</div>
+        <h3>Ethical Hacking Essentials</h3>
+        <p class="cert-issuer">EC-Council</p>
+        <div class="cert-actions">
+          <a href="assets/certificates/cert-4.pdf" target="_blank" class="btn btn-sm btn-outline">Preview</a>
+          <a href="assets/certificates/cert-4.pdf" download class="btn btn-sm btn-ghost">Download</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RESUME ===================== -->
+<section id="resume" class="section resume">
+  <div class="section-container resume-container">
+    <p class="section-eyebrow reveal">05 / RESUME</p>
+    <h2 class="section-heading reveal">Get The Full Picture</h2>
+    <p class="section-sub reveal">A complete breakdown of my experience, skills, and training — one PDF away.</p>
+    <div class="resume-actions reveal">
+      <a href="assets/resume.pdf" download class="btn btn-primary btn-lg">
+        <span>Download Resume</span>
+      </a>
+      <a href="assets/resume.pdf" target="_blank" class="btn btn-outline btn-lg">
+        <span>Preview Resume</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="section contact">
+  <div class="section-container">
+    <p class="section-eyebrow reveal">06 / CONTACT</p>
+    <h2 class="section-heading reveal">Let's Connect</h2>
+    <p class="section-sub reveal">Open to internships, bug bounty collaborations, and entry-level security roles.</p>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <a href="mailto:cybersantanu@example.com" class="contact-item">
+          <span class="contact-icon">&#9993;</span>
+          <span><strong>Email</strong><br>cybersantanu@example.com</span>
+        </a>
+        <a href="https://github.com/cybersantanu" target="_blank" rel="noopener" class="contact-item">
+          <span class="contact-icon">&#128187;</span>
+          <span><strong>GitHub</strong><br>github.com/cybersantanu</span>
+        </a>
+        <a href="#" class="contact-item">
+          <span class="contact-icon">&#128279;</span>
+          <span><strong>LinkedIn</strong><br>linkedin.com/in/cybersantanu</span>
+        </a>
+        <a href="tel:+910000000000" class="contact-item">
+          <span class="contact-icon">&#128222;</span>
+          <span><strong>Phone</strong><br>+91 00000 00000</span>
+        </a>
+        <div class="contact-item contact-item-static">
+          <span class="contact-icon">&#128205;</span>
+          <span><strong>Location</strong><br>West Bengal, India</span>
+        </div>
+
+        <div class="social-row">
+          <a href="https://github.com/cybersantanu" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">GH</a>
+          <a href="#" class="social-icon" aria-label="LinkedIn">IN</a>
+          <a href="#" class="social-icon" aria-label="Twitter / X">X</a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contact-form">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-row">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          <span>Send Message</span>
+        </button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <span class="logo-bracket">&lt;</span>SB<span class="logo-bracket">/&gt;</span>
+      <p>Santanu Biswas — Cyber Security Enthusiast</p>
+    </div>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p class="footer-copy">&copy; <span id="footer-year"></span> Santanu Biswas. All rights reserved.</p>
+  </div>
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">&uarr;</button>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
